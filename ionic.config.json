@@ -1,0 +1,7 @@
+{
+  "name": "RodoApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
