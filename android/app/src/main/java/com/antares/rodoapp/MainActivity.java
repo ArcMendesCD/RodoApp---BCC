@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package com.antares.rodoapp;
 
 import com.getcapacitor.BridgeActivity;
 
