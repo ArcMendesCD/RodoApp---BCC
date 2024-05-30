@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Documentos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Upload de Arquivos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="block" (click)="triggerFileInput()">Adicionar Arquivo</ion-button>
+        <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
+        <ion-text color="medium">
+          <small class="custom-text">Por favor, selecione um arquivo para upload.</small>
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Visualizar Documentos</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="block" (click)="viewNotaFiscal()">Ver Nota Fiscal</ion-button>
+        <ion-button expand="block" (click)="viewNotaCarga()">Ver Nota de Carga</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
