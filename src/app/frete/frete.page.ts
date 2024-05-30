@@ -11,6 +11,7 @@ export class FretePage implements OnInit {
 
   ngOnInit() {
   }
+  // PEGAR DO BANCO
   public segment: string = "list";
   public arr = new Array(25);
 

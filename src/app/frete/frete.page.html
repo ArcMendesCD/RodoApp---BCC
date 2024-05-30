@@ -4,22 +4,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
     <ion-segment (ionChange)="segmentChanged($event)" value="list">
-      <ion-segment-button value="list">
-        <ion-label>
-          List
-        </ion-label>
+
+      <ion-segment-button value="disponivel">
+        <ion-icon name="briefcase"></ion-icon>
+        <!-- <ion-icon name="globe"></ion-icon> -->
       </ion-segment-button>
-      <ion-segment-button value="card">
-        <ion-label>
-          Card
-        </ion-label>
+
+      <ion-segment-button value="ativo">
+        <ion-icon name="swap-horizontal"></ion-icon>
+        <!-- <ion-icon name="git-branch"></ion-icon> -->
       </ion-segment-button>
+
+      <ion-segment-button value="historico">
+        <ion-icon name="time"></ion-icon>
+        <!-- <ion-icon name="ribbon"></ion-icon> -->
+      </ion-segment-button>
+
     </ion-segment>
+
+
     <ion-list
       class="animate__animated animate__slideInUp animate__fast"
-      *ngIf="segment === 'list'"
-    >
+      *ngIf="segment === 'disponivel'">
       <ion-item *ngFor="let item of arr; let index = index">
         <ion-label>Item {{ index + 1 }}</ion-label>
       </ion-item>
@@ -27,13 +35,24 @@
   
     <div
       class="animate__animated animate__slideInUp animate__fast"
-      *ngIf="segment === 'card'"
-    >
+      *ngIf="segment === 'ativo'">
       <ion-card *ngFor="let item of arr; let index = index">
         <ion-card-content>
           <h2>Card {{ index + 1 }}</h2>
         </ion-card-content>
       </ion-card>
     </div>
+
+    <div
+      class="animate__animated animate__slideInUp animate__fast"
+      *ngIf="segment === 'historico'">
+      <ion-card *ngFor="let item of arr; let index = index">
+        <ion-card-content>
+          <h2>Card {{ index + 1 }}</h2>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+
   </ion-content>
   
