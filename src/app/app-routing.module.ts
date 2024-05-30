@@ -14,7 +14,15 @@ const routes: Routes = [
   {
     path: 'perfil',
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+  },  {
+    path: 'frete',
+    loadChildren: () => import('./frete/frete.module').then( m => m.FretePageModule)
   },
+  {
+    path: 'frete',
+    loadChildren: () => import('./frete/frete.module').then( m => m.FretePageModule)
+  },
+
 ];
 
 @NgModule({
