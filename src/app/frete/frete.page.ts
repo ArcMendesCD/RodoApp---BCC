@@ -11,5 +11,10 @@ export class FretePage implements OnInit {
 
   ngOnInit() {
   }
+  public segment: string = "list";
+  public arr = new Array(25);
 
+  segmentChanged(ev: any) {
+    this.segment = ev.detail.value;
+  }
 }
