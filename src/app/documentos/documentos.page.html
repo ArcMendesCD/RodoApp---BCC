@@ -1,32 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Documentos</ion-title>
+    <ion-title>Rodoapp</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <div class="container">
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Upload de Arquivos</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-button expand="block" (click)="triggerFileInput()">Adicionar Arquivo</ion-button>
-        <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
-        <ion-text color="medium">
-          <small class="custom-text">Por favor, selecione um arquivo para upload.</small>
-        </ion-text>
-      </ion-card-content>
-    </ion-card>
+<ion-content>
+  <!-- Card para Upload de Arquivos -->
+  <ion-card class="card-upload">
+    <!-- <ion-card-header> -->
+      <ion-icon name="cloud-upload"></ion-icon>
+      <ion-card-title>Upload de arquivos</ion-card-title>
+    <!-- </ion-card-header> -->
+    <ion-card-content>
+      <input type="file" id="fileInput" hidden (change)="onFileSelected($event)" />
+      <ion-button class="button-upload" expand="full" (click)="triggerFileInput()">
+        Upload de arquivos
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Visualizar Documentos</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-button expand="block" (click)="viewNotaFiscal()">Ver Nota Fiscal</ion-button>
-        <ion-button expand="block" (click)="viewNotaCarga()">Ver Nota de Carga</ion-button>
-      </ion-card-content>
-    </ion-card>
-  </div>
+  <!-- Card para Visualização de Documentos -->
+  <ion-card class="card-visualizacao">
+    <ion-card-header>
+      <ion-card-title>Visualização de documentos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nota fiscal</ion-label>
+        <ion-button fill="outline" slot="end">
+          Visualizar
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nota de carga</ion-label>
+        <ion-button fill="outline" slot="end">
+          Visualizar
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
