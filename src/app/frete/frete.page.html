@@ -1,8 +1,7 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
 
     <ion-segment (ionChange)="segmentChanged($event)" value="list">
@@ -38,7 +37,11 @@
       *ngIf="segment === 'ativo'">
       <ion-card *ngFor="let item of arr; let index = index">
         <ion-card-content>
-          <h2>Card {{ index + 1 }}</h2>
+          <ion-card-title>
+            <h2>Card {{ index + 1 }}</h2>
+          </ion-card-title>
+            <ion-icon name="location"></ion-icon> 
+            <p>City -to- City</p>
         </ion-card-content>
       </ion-card>
     </div>
@@ -52,7 +55,5 @@
         </ion-card-content>
       </ion-card>
     </div>
-
-
+    
   </ion-content>
-  

@@ -13,7 +13,7 @@ export class FretePage implements OnInit {
   }
   // PEGAR DO BANCO
   public segment: string = "list";
-  public arr = new Array(25);
+  public arr = new Array(5);
 
   segmentChanged(ev: any) {
     this.segment = ev.detail.value;
