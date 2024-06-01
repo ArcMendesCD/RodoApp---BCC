@@ -2,9 +2,18 @@
 ion-header{
     padding: 23px;
 }
+
+.content-upload,
+.content-visualizacao {
+    // margin: 38px 46px;
+    
+  }
+
 .card-upload,
 .card-visualizacao {
-    margin: 38px 46px;
+    max-width: 1100px;
+    margin: 0 auto;
+    // margin: 38px 46px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,27 +28,18 @@ ion-card-content{
 .card-visualizacao{
     margin-top: 38px;
 }
-  
-// ion-card-title{
-//     --color: #3F3F3F;
-// }
+
 
 .large-icon{
     margin: auto;
     font-size: 54px;
-    color: #fff; /* Opcional: cor do ícone */
+    color: #fff; 
 }
 
 
-// .card-upload, 
-// .card-visualizacao, 
-// ion-item{
-//     --background: #D9D9D9;
-//     --color: #3F3F3F;
-// }
-
-.card-visualizacao ion-item{
-    width: 90vw;
+.card-visualizacao ion-item,
+.card-visualizacao .md.card-content-md.hydrated{
+    width: 100%;
 }
 
 .button-upload, 
