@@ -14,12 +14,12 @@
     <ion-card-content>
         <!-- Botão estilo input para seleção de nota fiscal -->
         <input type="file" id="fileInputNotaFiscal" accept=".pdf, .xml" hidden (change)="onFileSelected('nota-fiscal', $event)" />
-        <ion-button class="button-visualizacao" fill="clear" slot="end" (click)="triggerFileInput('fileInputNotaFiscal')">
+        <ion-button class="button-upload" fill="clear" slot="end" (click)="triggerFileInput('fileInputNotaFiscal')">
           Selecione uma Nota Fiscal
         </ion-button>
         <!-- Botão estilo input para seleção de nota de carga -->
         <input type="file" id="fileInputNotaCarga" accept=".pdf, .xlsx, .csv" hidden (change)="onFileSelected('nota-carga', $event)" />
-        <ion-button class="button-visualizacao" fill="clear" slot="end" (click)="triggerFileInput('fileInputNotaCarga')">
+        <ion-button class="button-upload" fill="clear" slot="end" (click)="triggerFileInput('fileInputNotaCarga')">
           Selecione uma Nota de Carga
         </ion-button>
     </ion-card-content>

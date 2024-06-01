@@ -27,7 +27,7 @@ ion-card-content{
 .large-icon{
     margin: auto;
     font-size: 54px;
-    color: #ffffff; /* Opcional: cor do ícone */
+    color: #fff; /* Opcional: cor do ícone */
 }
 
 
@@ -44,9 +44,10 @@ ion-card-content{
 
 .button-upload, 
 .button-visualizacao{
-    --background: #A7A7A7;
+    --background: #fff;
     --border-color:var(--background);
     --border-radius: 10px;
     --color: #3F3F3F;
+    font-weight: bold;
 }
 
