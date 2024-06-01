@@ -7,11 +7,11 @@ import { DocumentosPage } from './documentos.page'; // Importa o componente da p
 
 @NgModule({
   imports: [
-    CommonModule, // Importa CommonModule para funcionalidades comuns do Angular
-    FormsModule,  // Importa FormsModule para funcionalidades de formulários
-    IonicModule,  // Importa IonicModule para componentes do Ionic
-    DocumentosPageRoutingModule // Importa o módulo de roteamento da página de documentos
+    CommonModule, 
+    FormsModule,  
+    IonicModule,  
+    DocumentosPageRoutingModule 
   ],
-  declarations: [DocumentosPage] // Declara o componente DocumentosPage
+  declarations: [DocumentosPage] 
 })
 export class DocumentosPageModule { }
