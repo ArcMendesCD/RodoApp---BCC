@@ -2,7 +2,11 @@
 ion-header{
     padding: 23px;
 }
-
+.flex-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .content-upload,
 .content-visualizacao {
     // margin: 38px 46px;
