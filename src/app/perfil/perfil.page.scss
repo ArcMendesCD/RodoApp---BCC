@@ -1,3 +1,7 @@
+:root {
+  --ion-text-color: #3F3F3F;
+}
+
 ion-header {
     height: 60px;
   }
@@ -11,3 +15,41 @@ ion-title{
   height: 150px;
   background-color: var(--cinza-escuro);
 }
+
+.user-content {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-content img{
+  margin-right: 20px;
+}
+
+.list-container {
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #3F3F3F;
+  background-color: var(--whiteish);
+  width: 90%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.list-container span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ion-input {
+  border: 0px solid black;
+}
+
