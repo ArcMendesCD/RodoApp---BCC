@@ -1,0 +1,17 @@
+.list-container {
+    border-radius: 10px;
+    margin-top: 20px;
+    color: #3F3F3F;
+    background-color: var(--whiteish);
+    width: 90%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+  }
+  
+  .list-container span {
+    font-size: 24px;
+    font-weight: bold;
+  }

@@ -1,32 +1,51 @@
 <ion-header>
     <button ion-button text-center menuToggle>
-      <ion-title class="ion-text-center"><img alt="logo" id="header_logo" height="55" margin="20px" float-left src="../../assets/logo.png"></ion-title>
+      <ion-title class="ion-text-center"><img alt="logo" id="header_logo" height="55" margin="20px" src="../../assets/logo.png"></ion-title>
     </button>
 </ion-header>
 <ion-content class="ion-padding-top">
   <div class="profile">
-
+    <div class="user-content">
+      <img alt="logo" id="header_logo" height="55" margin="20px" src="../../assets/foto-andrei.png">
+       <span>Bom dia, Andrei</span>
+    </div>
   </div>
-  <ion-list>
-    <ion-item>
-      <ion-input label="Nome: " value="Fulano de Tal"></ion-input>
-    </ion-item>
+  <div class="list-container">
+    <ion-list>
+      <span>Dados Cadastrais</span>
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Nome: " fill="solid" value="Fulano de Tal" [readonly]="false" [(ngModel)]="first_name">
+          <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="E-mail: " value="fulano@gmail.com" [(ngModel)]="email">
+          <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Telefone: " value="(14)99000-9900" [(ngModel)]="phone">
+          <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Cargo: " value="Motorista" [readonly]="false" [(ngModel)]="user_type">
+          <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
+        </ion-input>
+      </ion-item>
   
-    <ion-item>
-      <ion-input label="E-mail: " value="fulano@gmail.com"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-input label="Telefone: " value="(14)99000-9900"></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-input label="Cargo: " value="Motorista" [readonly]="true"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-input label="Empresa: " value="RodoJacto" [readonly]="true"></ion-input>
-    </ion-item>
-  
-  </ion-list>
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Empresa: " value="RodoJacto" [readonly]="true">
+          <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+        </ion-input>
+      </ion-item>
+    
+    </ion-list>
+    <ion-button class="btn-atualizar" expand="full" (click)="getUser()">
+      BUSCAR DADOS
+    </ion-button>
+  </div>
 </ion-content>

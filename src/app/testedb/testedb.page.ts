@@ -2,18 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-perfil',
-  templateUrl: './perfil.page.html',
-  styleUrls: ['./perfil.page.scss'],
+  selector: 'app-testedb',
+  templateUrl: './testedb.page.html',
+  styleUrls: ['./testedb.page.scss'],
 })
-export class PerfilPage implements OnInit {
+export class TestedbPage implements OnInit {
 
   users : any = [];
 
-  first_name: string = '';
-  email: string = '';
-  phone: string = '';
-  user_type: string = '';
 
   constructor(private http: HttpClient) { 
   }
