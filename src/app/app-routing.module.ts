@@ -19,10 +19,6 @@ const routes: Routes = [
     path: 'frete',
     loadChildren: () => import('./frete/frete.module').then( m => m.FretePageModule)
   },
-  {
-    path: 'testedb',
-    loadChildren: () => import('./testedb/testedb.module').then( m => m.TestedbPageModule)
-  },
 ];
 
 @NgModule({
