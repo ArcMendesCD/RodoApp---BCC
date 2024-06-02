@@ -14,26 +14,26 @@
     <ion-list>
       <span>Dados Cadastrais</span>
       <ion-item>
-        <ion-input labelPlacement="stacked" label="Nome: " fill="solid" value="Fulano de Tal" [readonly]="true">
-          <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
-        </ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-input labelPlacement="stacked" label="E-mail: " value="fulano@gmail.com">
+        <ion-input labelPlacement="stacked" label="Nome: " fill="solid" value="Fulano de Tal" [readonly]="false" [(ngModel)]="first_name">
           <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
         </ion-input>
       </ion-item>
     
       <ion-item>
-        <ion-input labelPlacement="stacked" label="Telefone: " value="(14)99000-9900">
+        <ion-input labelPlacement="stacked" label="E-mail: " value="fulano@gmail.com" [(ngModel)]="email">
           <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
         </ion-input>
       </ion-item>
     
       <ion-item>
-        <ion-input labelPlacement="stacked" label="Cargo: " value="Motorista" [readonly]="true">
-          <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+        <ion-input labelPlacement="stacked" label="Telefone: " value="(14)99000-9900" [(ngModel)]="phone">
+          <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
+        </ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Cargo: " value="Motorista" [readonly]="false" [(ngModel)]="user_type">
+          <ion-icon slot="start" name="lock-open" aria-hidden="true"></ion-icon>
         </ion-input>
       </ion-item>
   
@@ -44,5 +44,8 @@
       </ion-item>
     
     </ion-list>
+    <ion-button class="btn-atualizar" expand="full" (click)="getUser()">
+      BUSCAR DADOS
+    </ion-button>
   </div>
 </ion-content>
