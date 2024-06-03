@@ -1,4 +1,7 @@
+// documentos.page.ts
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UploadService } from '../upload.service';
 
 @Component({
   selector: 'app-documentos',
@@ -7,10 +10,17 @@ import { Component } from '@angular/core';
 })
 export class DocumentosPage {
 
-  constructor() { }
+  constructor(private uploadService: UploadService, private router: Router) { }
 
   onFileSelected(tipoDocumento: string, event: any) {
-    // Lógica para processar o arquivo selecionado
+    const file: File = event.target.files[0];
+    if (file) {
+      this.uploadService.uploadFile(file, tipoDocumento).subscribe(response => {
+        console.log('Upload successful', response);
+      }, error => {
+        console.error('Upload failed', error);
+      });
+    }
   }
 
   triggerFileInput(idInput: string) {
@@ -18,5 +28,13 @@ export class DocumentosPage {
     if (inputElement) {
       inputElement.click();
     }
+  }
+
+  navegarParaNotaFiscal() {
+    this.router.navigate(['/nota-fiscal']);
+  }
+
+  navigarParaNotaCarga() {
+    this.router.navigate(['/carga']);
   }
 }
