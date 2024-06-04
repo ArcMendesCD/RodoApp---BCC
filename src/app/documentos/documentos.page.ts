@@ -37,6 +37,6 @@ export class DocumentosPage {
   }
 
   navegarParaNotaCarga() {
-    this.navCtrl.navigateForward(['/carga']);
+    this.navCtrl.navigateForward(['/cargas']);
   }
 }
