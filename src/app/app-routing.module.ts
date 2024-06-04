@@ -16,6 +16,14 @@ const routes: Routes = [
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
+    path: 'frete',
+    loadChildren: () => import('./frete/frete.module').then( m => m.FretePageModule)
+  },
+  {
+    path: 'documentos',
+    loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
+  },
+  {
     path: 'documentos',
     loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
   },
