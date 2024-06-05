@@ -6,9 +6,13 @@
     justify-content: center;
   }
 
+  ion-card-title, p{
+    color:var(--cinza-escuro); 
+}
+
 .large-icon{
     margin: auto;
     font-size: 54px;
-    color: #ffffff; /* Opcional: cor do ícone */
+    color: var(--cinza-escuro)
 }
 
