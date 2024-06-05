@@ -7,6 +7,10 @@
     color:var(--cinza-escuro); 
 }
 
+.item-inner{
+    padding-right: 0 !important ;
+}
+
 .card-upload,
 .card-visualizacao {
     max-width: 1100px;
@@ -43,10 +47,13 @@ ion-card-title{
     width: 100%;
     --color:var(--cinza-escuro); 
 }
+.item-inner{
+    padding: 0 0 0 0 !important;
+}
 
 .button-upload, 
 .button-visualizacao{
-    --background: #fff;
+    --background:var(--botao-cinza);
     --border-color:var(--background);
     --border-radius: 10px;
     --color:var(--cinza-escuro); 
