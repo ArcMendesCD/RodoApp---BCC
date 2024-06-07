@@ -31,6 +31,14 @@ const routes: Routes = [
     path: 'cargas',
     loadChildren: () => import('./cargas/cargas.module').then( m => m.CargasPageModule)
   },
+  {
+    path: 'nota-fiscal',
+    loadChildren: () => import('./nota-fiscal/nota-fiscal.module').then( m => m.NotaFiscalPageModule)
+  },
+  {
+    path: 'nota-fiscal',
+    loadChildren: () => import('./nota-fiscal/nota-fiscal.module').then( m => m.NotaFiscalPageModule)
+  },
   // {
   //   path: 'upload',
   //   loadChildren: () => import('./upload/upload.module').then( m => m.UploadPageModule)
