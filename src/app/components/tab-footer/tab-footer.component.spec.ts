@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
-
 import { TabFooterComponent } from './tab-footer.component';
 
 describe('TabFooterComponent', () => {
