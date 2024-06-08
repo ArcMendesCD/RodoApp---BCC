@@ -18,11 +18,7 @@ const routes: Routes = [
   {
     path: 'frete',
     loadChildren: () => import('./frete/frete.module').then( m => m.FretePageModule)
-  },
-  {
-    path: 'documentos',
-    loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
-  },
+  }
 ];
 
 @NgModule({
