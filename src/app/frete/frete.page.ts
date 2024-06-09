@@ -12,42 +12,41 @@ export class FretePage implements OnInit {
 
   item: any;
   public segment: string = "list";
-  users: any[] = [];
+  data: any[] = [];
   public userNames: string[] = [];
   private apiUrl = 'http://168.121.216.20/users.php';
 
   constructor(private route: ActivatedRoute, private itemService: ItemService, private http: HttpClient) { }
 
   ngOnInit() {
-    console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
       //ALL NAMES
-    // this.itemService.getUsers().subscribe(response => {
-    //   this.users = response;
+    // this.itemService.getData().subscribe(response => {
+    //   this.data = response;
     //   this.extractUserNames();
     // });
 
       // NAME 0
-    // this.itemService.getUsers().subscribe(response => {
+    // this.itemService.getData().subscribe(response => {
     //   if (response.length > 0) {
     //     this.userNames = response[0].first_name;
     //   }
     // });
 
       // ONLY 'LAURA'
-    this.itemService.getUsers().subscribe(response => {
-      this.users = response.filter(user => user.last_name === 'Yumi');
+    this.itemService.getData().subscribe(response => {
+      this.data = response.filter(user => user.last_name === 'Yumi');
     });
   }
   //ALL NAMES
   // extractUserNames() {
-  //   this.userNames = this.users.map(user => user.first_name);
+  //   this.userNames = this.data.map(user => user.first_name);
   // }
 
 
 
   segmentChanged(ev: any) {
     this.segment = ev.detail.value;
-    this.itemService.loadUsers();
+    this.itemService.loadData();
   }
 
 }

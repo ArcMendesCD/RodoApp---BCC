@@ -24,7 +24,7 @@
   
 
   <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'disponivel'">
-    <ion-card *ngFor="let user of users, let i = index">
+    <ion-card *ngFor="let user of data, let i = index">
       <ion-card-content>
 
         <div> {{ i + 1 }} - {{user.email}} </div>
@@ -36,7 +36,7 @@
   </div>
 
   <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'ativo'">
-    <ion-card *ngFor="let user of users, let i = index">
+    <ion-card *ngFor="let user of data, let i = index">
       <ion-card-content>
 
         <div>{{ i + 1 }} - {{user.email}} </div>
@@ -48,7 +48,7 @@
   </div>
 
   <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'historico'">
-    <ion-card *ngFor="let user of users, let i = index">
+    <ion-card *ngFor="let user of data, let i = index">
       <ion-card-content>
 
         <div>{{ i + 1 }} - {{user.email}} </div>
