@@ -27,11 +27,7 @@ const routes: Routes = [
     path: 'mapa',
     loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
   },
-  {
-    path: 'rodo-app',
-    loadChildren: () => import('./rodo-app/rodo-app.module').then( m => m.RodoAppPageModule)
-  },
-  {    path: 'documentos',
+  { path: 'documentos',
     loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
   },
   {
