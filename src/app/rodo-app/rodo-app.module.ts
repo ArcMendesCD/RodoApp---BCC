@@ -1,20 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
-import { RodoAppPageRoutingModule } from './rodo-app-routing.module';
-
-import { RodoAppPage } from './rodo-app.page';
+import { DocumentosPageRoutingModule } from './documentos-routing.module'; // Importa o módulo de roteamento da página de documentos
+import { DocumentosPage } from './documentos.page'; // Importa o componente da página de documentos
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RodoAppPageRoutingModule
+    CommonModule, 
+    FormsModule,  
+    IonicModule,  
+    DocumentosPageRoutingModule 
   ],
-  declarations: [RodoAppPage]
+  declarations: [DocumentosPage] 
 })
-export class RodoAppPageModule {}
+export class DocumentosPageModule { }
