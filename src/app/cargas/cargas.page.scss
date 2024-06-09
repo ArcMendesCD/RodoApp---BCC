@@ -1,24 +1,74 @@
 
-
 .card-visualizacao {
-    margin: 90px 46px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  ion-card-title, p{
-    color:var(--cinza-escuro); 
+  margin: 90px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.large-icon{
-    margin: auto;
-    font-size: 54px;
-    color: var(--cinza-escuro)
+.flex-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.descricao{
-  padding: 10px 0 20px 0;
+.carga{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  width: 225px;
+}
+
+ion-card-title, p {
+  color: var(--cinza-escuro);
+  font-family: 'Arial', sans-serif;
+  line-height: 1.5;
+}
+
+ion-card-header .large-icon {
+  margin: auto;
+  font-size: 54px;
+  color: var(--cinza-escuro);
+}
+
+.descricao {
+  padding: 10px 0 10px 0;
+}
+
+.legenda {
+  display: flex;
+  align-items: center;
+}
+
+.legenda ion-icon {
+  margin-right: 5px; 
+  font-size: 1.2em;
+  color: var(--icon-color); 
+}
+
+.legenda p {
+  margin: 0;
+}
+
+.acoes {
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.acoes .download,
+.acoes .compartilhar{
+  --background:var(--botao-cinza);
+  --color:var(--cinza-escuro); 
+}
+
+.acoes .excluir{
+  --background: red;
 }
 

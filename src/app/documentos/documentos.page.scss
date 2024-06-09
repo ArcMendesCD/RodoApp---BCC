@@ -1,6 +1,6 @@
 
 .flex-content{
-    margin: 90px 0;
+    margin: 90px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,9 +47,7 @@ ion-card-title{
     width: 100%;
     --color:var(--cinza-escuro); 
 }
-.item-inner{
-    padding: 0 0 0 0 !important;
-}
+
 
 .button-upload, 
 .button-visualizacao{
