@@ -18,4 +18,4 @@ Cada integrante deve criar uma branch com o seu nome e atualizar as suas mudanç
 # Dependencias
 ---
    npm install leaflet-routing-machine --legacy-peer-deps
-   
+   npm install leaflet-routing-machine @types/leaflet-routing-machine --force
