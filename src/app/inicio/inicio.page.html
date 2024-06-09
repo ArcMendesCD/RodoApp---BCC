@@ -1,0 +1,40 @@
+<ion-header>
+    <button ion-button text-center menuToggle>
+      <ion-title class="ion-text-center"><img alt="logo" id="header_logo" height="55" margin="20px" src="../../assets/logo.png"></ion-title>
+    </button>
+</ion-header>
+<ion-content class="ion-padding-top page-inicio">
+  <div class="message-inicio">
+    <p>Seja bem vindo ao seu aplicativo de <strong>controle de fretes!</strong></p>
+  </div>
+
+  <div class="question-user">
+    <p>Por onde você gostaria de começar?</p>
+  </div>
+
+  <div class="options-container">
+    <ion-list class="list-inicio">
+      <button (click)="navegarParaPerfil()" class="button-list-inicio">
+        Ver meu perfil
+      </button>
+    
+      <button (click)="navegarParaFretesAtivos()" class="button-list-inicio">
+        Ver meus fretes ativos
+      </button>
+    
+      <button (click)="navegarParaFretesDisponiveis()" class="button-list-inicio">
+        Ver os fretes disponiveis
+      </button>
+
+      <button (click)="navegarParaMapa()" class="button-list-inicio">
+        Visualizar o mapa local
+      </button>
+
+      <button (click)="navegarParaDocumentos()" class="button-list-inicio">
+        Fazer upload de documentos
+      </button>
+    
+    </ion-list>
+
+  </div>
+</ion-content>
