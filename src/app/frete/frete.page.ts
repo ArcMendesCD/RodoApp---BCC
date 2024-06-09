@@ -10,43 +10,30 @@ import { ItemService } from '../services/item.service';
 })
 export class FretePage implements OnInit {
 
-  item: any;
   public segment: string = "list";
-  users: any[] = [];
-  public userNames: string[] = [];
-  private apiUrl = 'http://168.121.216.20/users.php';
+  data_Disponivel: any[] = [];
+  data_Andamento: any[] = [];
+  data_Finalizada: any[] = [];
 
   constructor(private route: ActivatedRoute, private itemService: ItemService, private http: HttpClient) { }
 
   ngOnInit() {
-      //ALL NAMES
-    // this.itemService.getUsers().subscribe(response => {
-    //   this.users = response;
-    //   this.extractUserNames();
-    // });
-
-      // NAME 0
-    // this.itemService.getUsers().subscribe(response => {
-    //   if (response.length > 0) {
-    //     this.userNames = response[0].first_name;
-    //   }
-    // });
-
-      // ONLY 'LAURA'
-    this.itemService.getUsers().subscribe(response => {
-      this.users = response.filter(user => user.last_name === 'Yumi');
+    this.itemService.getShipping().subscribe(response => {
+      this.data_Disponivel = response.filter(shipping => shipping.shipping_status === 'Disponivel');
     });
-  }
-  //ALL NAMES
-  // extractUserNames() {
-  //   this.userNames = this.users.map(user => user.first_name);
-  // }
 
+    this.itemService.getShipping().subscribe(response => {
+      this.data_Andamento = response.filter(shipping => shipping.shipping_status === 'Em Andamento');
+    });
 
+    this.itemService.getShipping().subscribe(response => {
+      this.data_Finalizada = response.filter(shipping => shipping.shipping_status === 'Finalizada');
+    });
+  };
 
   segmentChanged(ev: any) {
     this.segment = ev.detail.value;
-    this.itemService.loadUsers();
+    this.itemService.loadData();
   }
 
 }
