@@ -1,21 +1,21 @@
-  <ion-tabs>
-    <ion-tab-bar slot="bottom" class="ion-no-border">
+<ion-tabs>
+  <ion-tab-bar slot="bottom" class="ion-no-border">
 
-      <ion-tab-button (click)="navigateTo('perfil')">
-        <ion-icon name="person" class="perfil"></ion-icon>
-      </ion-tab-button>
+    <ion-tab-button (click)="navigateTo('perfil')" [ngClass]="{ 'tab-selected': currentRoute === 'perfil' }">
+      <ion-icon name="person" class="perfil"></ion-icon>
+    </ion-tab-button>
 
-      <ion-tab-button (click)="navigateTo('frete')">
-        <ion-icon name="car" class="frete"></ion-icon>
-      </ion-tab-button>
+    <ion-tab-button (click)="navigateTo('frete')" [ngClass]="{ 'tab-selected': currentRoute === 'frete' }">
+      <ion-icon name="car" class="frete"></ion-icon>
+    </ion-tab-button>
 
-      <ion-tab-button (click)="navigateTo('documentos')">
-        <ion-icon name="share" class="documentos"></ion-icon>
-      </ion-tab-button>
+    <ion-tab-button (click)="navigateTo('documentos')" [ngClass]="{ 'tab-selected': currentRoute === 'documentos' }">
+      <ion-icon name="share" class="documentos"></ion-icon>
+    </ion-tab-button>
 
-      <ion-tab-button (click)="navigateTo('mapa')">
-        <ion-icon name="map" class="mapa"></ion-icon>
-      </ion-tab-button>
+    <ion-tab-button (click)="navigateTo('mapa')" [ngClass]="{ 'tab-selected': currentRoute === 'mapa' }">
+      <ion-icon name="map" class="mapa"></ion-icon>
+    </ion-tab-button>
 
-    </ion-tab-bar>
-  </ion-tabs>
+  </ion-tab-bar>
+</ion-tabs>

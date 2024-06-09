@@ -27,7 +27,7 @@ export class InicioPage implements OnInit {
   }
 
   navegarParaMapa() {
-    // this.router.navigate(['/mapa']);
+    this.router.navigate(['/mapa']);
   }
 
   navegarParaDocumentos() {
