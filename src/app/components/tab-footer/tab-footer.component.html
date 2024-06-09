@@ -1,34 +1,21 @@
-<ion-footer>
   <ion-tabs>
     <ion-tab-bar slot="bottom" class="ion-no-border">
 
-      <ion-tab-button tab="perfil">
+      <ion-tab-button tab="perfil" (click)="navigateTo('perfil')">
         <ion-icon name="person" class="perfil"></ion-icon>
       </ion-tab-button>
 
-      <ion-tab-button tab="frete">
+      <ion-tab-button tab="frete" (click)="navigateTo('frete')">
         <ion-icon name="car" class="frete"></ion-icon>
       </ion-tab-button>
 
-      <ion-tab-button tab="home">
+      <ion-tab-button tab="home" (click)="navigateTo('home')">
         <ion-icon name="share" class="documentos"></ion-icon>
-        <!-- <ion-icon name="documents"></ion-icon> -->
-        <!-- <ion-icon name="document-text"></ion-icon> -->
-        <!-- <ion-icon name="document-text"></ion-icon> -->
-        <!-- <ion-icon name="file-tray"></ion-icon> -->
-        <!-- <ion-icon name="folder"></ion-icon> -->
-        <!-- <ion-icon name="folder-open"></ion-icon> -->
-        <!-- <ion-icon name="folder-open"></ion-icon> -->
-
-        <!-- <ion-icon name="archive"></ion-icon> -->
-        <!-- <ion-icon name="albums"></ion-icon> -->
-        <!-- <ion-icon name="add-circle"></ion-icon> -->
       </ion-tab-button>
 
-      <ion-tab-button tab="mapa">
+      <ion-tab-button tab="mapa" (click)="navigateTo('mapa')">
         <ion-icon name="map" class="mapa"></ion-icon>
       </ion-tab-button>
 
     </ion-tab-bar>
   </ion-tabs>
-</ion-footer>

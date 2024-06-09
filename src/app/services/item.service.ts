@@ -6,20 +6,24 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ItemService {
-  private apiUrl = 'http://168.121.216.20/';
+  private apiUrl = 'http://168.121.216.20/users.php';
 
-  data: any = [];
+  users: any = [];
 
   constructor(private http: HttpClient) { }
 
-  loadData() {
+  loadUsers() {
     this.http.get(this.apiUrl).subscribe((response) => {
       console.log(response);
-      this.data = response;
+      this.users = response;
     });
   }
 
-  getData(): Observable<any[]> {
+  getItem(first_name: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}?first_name=laurinha`);
+  }
+
+  getUsers(): Observable<any[]> {
     return this.http.get<any[]>(this.apiUrl);
   }
   
