@@ -1,4 +1,76 @@
-#map {
-    height: 100%;
-  }
-  
+#control-panel {
+  position: fixed;
+  top: 80px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  z-index: 999;
+  max-width: 80%;
+}
+
+ion-item {
+  --background: rgba(0, 0, 0, 0.3);
+  --inner-padding-top: 10px;
+  --inner-padding-bottom: 10px;
+  color: white;
+}
+
+ion-button {
+  margin-top: 10px;
+}
+
+.leaflet-routing-container {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.leaflet-routing-alternatives-container {
+  background-color: #333;
+  color: #fff;
+}
+
+.leaflet-routing-alt {
+  background-color: #444;
+  color: #fff;
+  border-top: 1px solid #555;
+}
+
+.leaflet-routing-alt .leaflet-routing-alt-total {
+  background-color: #555;
+  color: #fff;
+  padding: 5px;
+  border-top: 1px solid #666;
+}
+
+.leaflet-routing-instructions {
+  background-color: #333;
+  color: #fff;
+}
+
+.leaflet-routing-instructions .leaflet-routing-instruction {
+  background-color: #444;
+  color: #fff;
+  border-bottom: 1px solid #555;
+  padding: 10px;
+}
+
+.leaflet-routing-instructions .leaflet-routing-instruction .leaflet-routing-instruction-sign {
+  background-color: #555;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.leaflet-routing-instructions .leaflet-routing-instruction .leaflet-routing-instruction-text {
+  color: #fff;
+}
+
+.leaflet-routing-container-hide {
+  display: none;
+}
+
+.instructions-hidden {
+  display: none !important;
+}

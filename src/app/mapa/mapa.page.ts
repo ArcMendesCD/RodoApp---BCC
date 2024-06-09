@@ -11,11 +11,14 @@ export class MapaPage implements OnInit {
   private map: any;
   public start: string = '';
   public destination: string = '';
+  public showRouteInstructions: boolean = true;
+  private routeControl: any;
 
   constructor() { }
 
   ngOnInit() {
     this.loadMap();
+    this.getUserLocation();
   }
 
   loadMap() {
@@ -26,13 +29,37 @@ export class MapaPage implements OnInit {
     }).addTo(this.map);
   }
 
+  getUserLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+          this.map.setView([latitude, longitude], 13);
+          L.marker([latitude, longitude], {
+            icon: L.icon({
+              iconUrl: 'assets/userlocation.png',
+              iconSize: [32, 32],
+              iconAnchor: [16, 16],
+              popupAnchor: [0, 0]
+            })
+          }).addTo(this.map).bindPopup('Sua localização');
+        },
+        (error) => {
+          console.error('Erro ao obter a localização:', error);
+        }
+      );
+    } else {
+      console.error('Geolocalização não suportada');
+    }
+  }
+
   calculateRoute() {
     if (!this.start || !this.destination) {
       alert('Por favor, insira ambos os pontos de partida e destino.');
       return;
     }
 
-    // Convertendo entradas de string para coordenadas
     const startCoords = this.parseCoordinates(this.start);
     const destinationCoords = this.parseCoordinates(this.destination);
 
@@ -41,26 +68,51 @@ export class MapaPage implements OnInit {
       return;
     }
 
-    // Remover rota existente, se houver
-    if (this.map._layers) {
-      for (let i in this.map._layers) {
-        if (this.map._layers[i]._route) {
-          this.map.removeLayer(this.map._layers[i]);
-        }
-      }
+    if (this.routeControl) {
+      this.map.removeControl(this.routeControl);
     }
 
-    // Adicionar nova rota
-    L.Routing.control({
-      waypoints: [
-        L.latLng(startCoords[0], startCoords[1]),
-        L.latLng(destinationCoords[0], destinationCoords[1])
-      ],
-      routeWhileDragging: true,
-      router: L.Routing.osrmv1({
-        serviceUrl: 'https://router.project-osrm.org/route/v1'
-      })
-    }).addTo(this.map);
+    if (this.showRouteInstructions) {
+      this.routeControl = L.Routing.control({
+        waypoints: [
+          L.latLng(startCoords[0], startCoords[1]),
+          L.latLng(destinationCoords[0], destinationCoords[1])
+        ],
+        routeWhileDragging: true,
+        router: L.Routing.osrmv1({
+          serviceUrl: 'https://router.project-osrm.org/route/v1'
+        }),
+        show: true
+      }).addTo(this.map);
+
+      this.hideRouteInstructionsAfterDelay();
+    }
+  }
+
+  toggleRouteInstructions() {
+    this.showRouteInstructions = !this.showRouteInstructions;
+    if (this.routeControl) {
+      const startCoords = this.parseCoordinates(this.start);
+      const destinationCoords = this.parseCoordinates(this.destination);
+      if (startCoords && destinationCoords) {
+        this.routeControl.setWaypoints([
+          L.latLng([startCoords[0], startCoords[1], 0]),
+          L.latLng([destinationCoords[0], destinationCoords[1], 0])
+        ]);
+        this.hideRouteInstructionsAfterDelay();
+      } else {
+        console.error('As coordenadas de partida ou destino são inválidas.');
+      }
+    }
+  }
+
+  hideRouteInstructionsAfterDelay() {
+    setTimeout(() => {
+      const instructionsContainer = document.querySelector('.leaflet-routing-container');
+      if (instructionsContainer) {
+        instructionsContainer.classList.add('instructions-hidden');
+      }
+    }, 5000);
   }
 
   parseCoordinates(coords: string): number[] | null {

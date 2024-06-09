@@ -1,19 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Mapa</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-label position="stacked">Ponto de Partida (A)</ion-label>
-    <ion-input type="text" [(ngModel)]="start" placeholder="latitude,longitude"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="stacked">Destino (Z)</ion-label>
-    <ion-input type="text" [(ngModel)]="destination" placeholder="latitude,longitude"></ion-input>
-  </ion-item>
-  <ion-button expand="block" (click)="calculateRoute()">Calcular Rota</ion-button>
+  <div id="map" style="height: 100%;"></div>
 
-  <div #mapContainer id="map" style="height: 100%;"></div>
+  <div class="control-panel" id="control-panel"> <!-- Diretiva *ngIf para controlar a visibilidade -->
+    <ion-item color="dark">
+      <ion-label position="stacked">Ponto de Partida</ion-label>
+      <ion-input type="text" [(ngModel)]="start"></ion-input>
+    </ion-item>
+    <ion-item color="dark">
+      <ion-label position="stacked">Destino</ion-label>
+      <ion-input type="text" [(ngModel)]="destination"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="calculateRoute()">Calcular Rota</ion-button>
+    <ion-button expand="block" (click)="toggleRouteInstructions()">
+      {{ showRouteInstructions ? 'Ocultar Instruções' : 'Exibir Instruções' }}
+    </ion-button>
+  </div>
 </ion-content>
