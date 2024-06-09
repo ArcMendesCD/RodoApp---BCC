@@ -1,13 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>mapa</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">mapa</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div id="map" style="height: 100%;"></div>
+
+  <div class="control-panel" id="control-panel"> <!-- Diretiva *ngIf para controlar a visibilidade -->
+    <ion-item color="dark">
+      <ion-label position="stacked">Ponto de Partida</ion-label>
+      <ion-input type="text" [(ngModel)]="start"></ion-input>
+    </ion-item>
+    <ion-item color="dark">
+      <ion-label position="stacked">Destino</ion-label>
+      <ion-input type="text" [(ngModel)]="destination"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="calculateRoute()">Calcular Rota</ion-button>
+    <ion-button expand="block" (click)="toggleRouteInstructions()">
+      {{ showRouteInstructions ? 'Ocultar Instruções' : 'Exibir Instruções' }}
+    </ion-button>
+  </div>
 </ion-content>
