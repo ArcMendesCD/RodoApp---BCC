@@ -54,3 +54,18 @@ ion-footer {
     --ion-color-selected: #ababab;
     --ion-color-btn: #A7A7A7;
 }
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
