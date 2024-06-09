@@ -14,3 +14,8 @@ Exeto o banco de dados
      * _<sub>
 Cada integrante deve criar uma branch com o seu nome e atualizar as suas mudanças nessa branch para depois analizarmos como grupo e mesclarmos em uma branch main
 </sub>_ 
+
+# Dependencias
+---
+   npm install leaflet-routing-machine --legacy-peer-deps
+   
