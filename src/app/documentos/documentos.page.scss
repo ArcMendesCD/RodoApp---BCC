@@ -1,6 +1,6 @@
 
 .flex-content{
-    margin: 90px 0;
+    margin: 80px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,7 +31,7 @@ ion-card-title{
 }
 
 .card-visualizacao{
-    margin-top: 38px;
+    margin-top: 30px;
 }
 
 
@@ -47,9 +47,7 @@ ion-card-title{
     width: 100%;
     --color:var(--cinza-escuro); 
 }
-.item-inner{
-    padding: 0 0 0 0 !important;
-}
+
 
 .button-upload, 
 .button-visualizacao{
@@ -60,3 +58,11 @@ ion-card-title{
     font-weight: bold;
 }
 
+.button-upload {
+    display: flex;
+    align-items: center;
+  }
+  .button-upload ion-icon {
+    font-size: 20px; /* Tamanho do ícone */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+  }
