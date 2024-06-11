@@ -1,0 +1,48 @@
+
+<ion-content>
+<div class="flex-content">
+  <div class="content-upload">
+  <ion-card class="card-upload">
+    <ion-card-header>
+      <ion-icon class="large-icon" name="cloud-upload"></ion-icon>
+      <ion-card-title>Upload de Arquivos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <input type="file" id="fileInputNotaFiscal" accept=".pdf, .xml" hidden (change)="onFileSelected('nota-fiscal', $event)" />
+        <ion-button class="button-upload" fill="clear" slot="end" (click)="triggerFileInput('fileInputNotaFiscal')">
+          <ion-icon name="document-text-outline"></ion-icon>
+          Fiscal
+        </ion-button>
+        <input type="file" id="fileInputNotaCarga" accept=".pdf, .xlsx, .csv" hidden (change)="onFileSelected('carga', $event)" />
+        <ion-button class="button-upload" fill="clear" slot="end" (click)="triggerFileInput('fileInputNotaCarga')">
+          <ion-icon name="cube-outline"></ion-icon>
+          Carga
+        </ion-button>
+    </ion-card-content>
+  </ion-card>
+</div>
+  
+  <div class="content-">
+  <ion-card class="card-visualizacao">
+    <ion-card-header>
+      <ion-icon name="eye" class="large-icon"></ion-icon>
+      <ion-card-title>Visualização</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Nota fiscal</ion-label>
+        <ion-button class="button-visualizacao" fill="outline" slot="end" (click)="navegarParaNotaFiscal()">
+          Visualizar
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nota de carga</ion-label>
+        <ion-button class="button-visualizacao" fill="outline" slot="end" (click)="navegarParaNotaCarga()">
+          Visualizar
+        </ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</div>
+</div>
+</ion-content>

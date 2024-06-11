@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-segment (ionChange)="segmentChanged($event)" value="list">
+
+    <ion-segment-button value="disponivel">
+      <ion-icon name="briefcase"></ion-icon>
+      <!-- <ion-icon name="globe"></ion-icon> -->
+    </ion-segment-button>
+
+    <ion-segment-button value="ativo">
+      <ion-icon name="swap-horizontal"></ion-icon>
+      <!-- <ion-icon name="git-branch"></ion-icon> -->
+    </ion-segment-button>
+
+    <ion-segment-button value="historico">
+      <ion-icon name="time"></ion-icon>
+      <!-- <ion-icon name="ribbon"></ion-icon> -->
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'disponivel'">
+    <ion-card *ngFor="let user of users, let i = index">
+      <ion-card-content>
+
+        <div> {{ i + 1 }} - {{user.email}} </div>
+        <ion-icon name="location"></ion-icon>
+        <p>{{user.first_name}} -to- {{user.last_name}}</p>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'ativo'">
+    <ion-card *ngFor="let user of users, let i = index">
+      <ion-card-content>
+
+        <div>{{ i + 1 }} - {{user.email}} </div>
+        <ion-icon name="location"></ion-icon>
+        <p>{{user.first_name}} -to- {{user.last_name}}</p>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'historico'">
+    <ion-card *ngFor="let user of users, let i = index">
+      <ion-card-content>
+
+        <div>{{ i + 1 }} - {{user.email}} </div>
+        <ion-icon name="location"></ion-icon>
+        <p>{{user.first_name}} -to- {{user.last_name}}</p>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

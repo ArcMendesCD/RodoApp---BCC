@@ -16,9 +16,33 @@ const routes: Routes = [
     loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
   },
   {
-    path: 'testedb',
-    loadChildren: () => import('./testedb/testedb.module').then( m => m.TestedbPageModule)
+    path: 'frete',
+    loadChildren: () => import('./frete/frete.module').then( m => m.FretePageModule)
   },
+  {
+    path: 'documentos',
+    loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
+  },
+  {
+    path: 'documentos',
+    loadChildren: () => import('./documentos/documentos.module').then( m => m.DocumentosPageModule)
+  },
+  {
+    path: 'cargas',
+    loadChildren: () => import('./cargas/cargas.module').then( m => m.CargasPageModule)
+  },
+  {
+    path: 'nota-fiscal',
+    loadChildren: () => import('./nota-fiscal/nota-fiscal.module').then( m => m.NotaFiscalPageModule)
+  },
+  {
+    path: 'nota-fiscal',
+    loadChildren: () => import('./nota-fiscal/nota-fiscal.module').then( m => m.NotaFiscalPageModule)
+  },
+  // {
+  //   path: 'upload',
+  //   loadChildren: () => import('./upload/upload.module').then( m => m.UploadPageModule)
+  // },
 ];
 
 @NgModule({
