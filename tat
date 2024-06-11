@@ -1,0 +1,179 @@
+[33mcommit 8b859209d6b93bc3183cb80cb97cfb4a6db16980[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mLAURA[m[33m)[m
+Author: LYO <142507365+LauraYumiOsawa@users.noreply.github.com>
+Date:   Sat Jun 8 18:46:26 2024 -0300
+
+    fix: components
+
+[33mcommit a0e7d782841939c5c31c1ae989f142f939d62a50[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sat Jun 8 17:13:23 2024 -0300
+
+    fix: removing html from app.component
+
+[33mcommit ae533a0b0e851320702ed836a21b3fe2a0bd226e[m[33m ([m[1;31morigin/LAURA[m[33m)[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sat Jun 8 17:12:12 2024 -0300
+
+    feat: allow logo-header to all pages
+
+[33mcommit 1568138720915bf7e66bc05724b770a4da5a1c36[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sat Jun 8 16:47:57 2024 -0300
+
+    fix: removing documents route
+
+[33mcommit 1cee6b2da6adfdbabf0cc51860db6850faeef8c5[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sat Jun 8 16:31:43 2024 -0300
+
+    refactor: remove documents (not mine)
+
+[33mcommit 75e5cce49012ea596d9c72f8640f4814e2d9c9cf[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sun Jun 2 19:25:36 2024 -0300
+
+    new page: add documents page
+
+[33mcommit f0f1380102394232119d43ef221b21236fec0d2a[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sun Jun 2 19:10:08 2024 -0300
+
+    removing testsDB
+
+[33mcommit c1a3b5754202630cfef31cf94044c4805bcf9594[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sun Jun 2 19:07:01 2024 -0300
+
+    feat: creating service logic to show the db informations in the frete page
+
+[33mcommit c6d2193f33b0fdb37330877b125f3411302978b3[m
+Merge: 10a9805 8ecf3a5
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Sun Jun 2 00:06:15 2024 -0300
+
+    merge db
+
+[33mcommit 8ecf3a5a644af2757dbb174889de5cb7d62945ec[m[33m ([m[1;31morigin/basic-app[m[33m, [m[1;32mbasic-app[m[33m)[m
+Merge: f6b04d2 776d009
+Author: LYO <142507365+LauraYumiOsawa@users.noreply.github.com>
+Date:   Sat Jun 1 23:57:46 2024 -0300
+
+    Merge pull request #7 from ArcMendesCD/ANDREI
+    
+    Andrei
+
+[33mcommit 776d009afa0fd8c287d66db9372fa252bc23578b[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/ANDREI[m[33m)[m
+Author: ArcMendesCD <andreircmendes@gmail.com>
+Date:   Sat Jun 1 23:25:49 2024 -0300
+
+    adicionar tela testedb
+
+[33mcommit 19e9a45b87babcd8332e1825a5b504106f3a4c18[m
+Author: ArcMendesCD <andreircmendes@gmail.com>
+Date:   Sat Jun 1 23:21:03 2024 -0300
+
+    Teste db
+
+[33mcommit f6b04d2e65ff2a3624e2b33ce76f59d06583047d[m
+Merge: 47f4ac8 f753431
+Author: LYO <142507365+LauraYumiOsawa@users.noreply.github.com>
+Date:   Sat Jun 1 23:17:53 2024 -0300
+
+    Merge pull request #6 from ArcMendesCD/andrei
+    
+    Integração com DB
+
+[33mcommit f753431f7562d53889dcc6c9aafc3ea3dcc6215a[m[33m ([m[1;32mandrei[m[33m)[m
+Author: ArcMendesCD <andreircmendes@gmail.com>
+Date:   Sat Jun 1 21:18:59 2024 -0300
+
+    Integração com DB
+
+[33mcommit 10a980585e9e89c9d7d55f7e8fcef15accc4a5d4[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 23:09:55 2024 -0300
+
+    nao me lembro, mas preciso dar commit para fazer o banco
+
+[33mcommit 9a8a7413d4ec6dd5e792fcd70843b81957320c45[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 20:57:09 2024 -0300
+
+    adicionando lista e tabs
+
+[33mcommit 254263d7b21601cea125bd78803dac14c637ccc4[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 19:47:08 2024 -0300
+
+    base da page
+
+[33mcommit 15bd15c6b4bb9c292a145d80b8706807c392eff2[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 19:34:10 2024 -0300
+
+    frete page
+
+[33mcommit 47f4ac852ffac564ffae6418a4dc6d1c55d6db55[m
+Merge: 11120a6 b7db2ee
+Author: LYO <142507365+LauraYumiOsawa@users.noreply.github.com>
+Date:   Thu May 30 19:14:25 2024 -0300
+
+    Merge pull request #2 from ArcMendesCD/LAURA
+    
+    adicionando tab
+
+[33mcommit b7db2ee06b9b5ab96f14cea8eb6337bb5ef5d9cb[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 19:12:21 2024 -0300
+
+    removendo tabs.html
+
+[33mcommit 3d500f39819b574561c7a58d4fde6c099a7ffeed[m
+Merge: fde12db 11120a6
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 18:43:21 2024 -0300
+
+    Merge branch 'main' into LAURA
+
+[33mcommit fde12dbf6be09bcdbdede7e5a2d6596eb0877892[m
+Merge: 8125090 c82c827
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 18:36:53 2024 -0300
+
+    Merge branch 'main' into LAURA
+
+[33mcommit 11120a6a1c506c31d805194d28491c7ae56e0bcb[m
+Author: ArcMendesCD <andreircmendes@gmail.com>
+Date:   Thu May 30 18:33:04 2024 -0300
+
+    mudanças header e pag perfil
+
+[33mcommit c82c827c0476dd5795262b7c88be777ee0ed668c[m
+Author: ArcMendesCD <andreircmendes@gmail.com>
+Date:   Thu May 30 18:00:14 2024 -0300
+
+    Mudança de Configurações basicas / Tela de Perfil
+
+[33mcommit 8125090052ebcf89d27bf236a2821248fc7b09a0[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 17:47:28 2024 -0300
+
+    ion-tab fix
+
+[33mcommit 881c986111123cb573d1998c8ceab30878847200[m
+Author: laura yumi <laurayumi30@gmail.com>
+Date:   Thu May 30 17:47:14 2024 -0300
+
+    ion-tab
+
+[33mcommit 28af273b971be2edcad92ea8034e890cb179e536[m
+Author: ArcMendesCD <andreircmendes@gmail.com>
+Date:   Fri May 17 23:25:23 2024 -0300
+
+    Adicionado Suporte ao android studio e editores IOS
+
+[33mcommit 78395fadfa15aff667599dc1cf814480513ae7a4[m
+Author: ArcMendesCD <andreircmendes@gmail.com>
+Date:   Fri May 17 23:12:14 2024 -0300
+
+    Primeiro Commit

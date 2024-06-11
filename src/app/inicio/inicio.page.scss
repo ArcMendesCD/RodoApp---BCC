@@ -1,0 +1,64 @@
+:root {
+  --ion-text-color: #3F3F3F;
+}
+
+ion-header {
+    height: 60px;
+  }
+
+ion-title{
+  margin-top: 5px;
+}
+
+.page-inicio p {
+  margin: 0;
+}
+
+.message-inicio {
+  background-color: var(--cinza-escuro);
+  padding: 20px;
+}
+
+.message-inicio p{
+  font-size: 20px;
+  font-style: italic;
+}
+
+.question-user {
+  background-color: var(--cinza-escuro);
+  margin: 20px 10px;
+  padding: 28px 12px;
+  border-radius: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.options-container {
+  background-color: var(--cinza-escuro);
+  margin: 20px auto;
+  border-radius: 10px;
+  width: 90%;
+  padding: 20px;
+  display: block;
+  text-align: center;
+}
+
+.list-inicio {
+  background-color: var(--cinza-escuro);
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.button-list-inicio {
+  width: 100%;
+  background: var(--cinza-mais-escuro);
+  padding: 18px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 4px 6px 10px #ffffff0f;
+}

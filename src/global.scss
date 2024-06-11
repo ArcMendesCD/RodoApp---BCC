@@ -39,3 +39,44 @@
 ion-navbar.toolbar {
     min-height: 60px;
 }
+
+ion-footer {
+    height: 60px;
+    background-color: transparent;
+}
+
+.button-native {
+    background-color: var(--ion-color-btn);
+}
+
+:root {
+    --ion-color-background: #2C2C2C;
+    --ion-color-selected: #ababab;
+    --ion-color-btn: #A7A7A7;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+html, body, ion-app, ion-content {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
