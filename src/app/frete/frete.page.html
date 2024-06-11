@@ -1,6 +1,6 @@
 <ion-header>
-  <ion-toolbar>
-  </ion-toolbar>
+  <app-logo-header>
+  </app-logo-header>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -9,55 +9,75 @@
 
     <ion-segment-button value="disponivel">
       <ion-icon name="briefcase"></ion-icon>
-      <!-- <ion-icon name="globe"></ion-icon> -->
     </ion-segment-button>
 
     <ion-segment-button value="ativo">
       <ion-icon name="swap-horizontal"></ion-icon>
-      <!-- <ion-icon name="git-branch"></ion-icon> -->
     </ion-segment-button>
 
     <ion-segment-button value="historico">
       <ion-icon name="time"></ion-icon>
-      <!-- <ion-icon name="ribbon"></ion-icon> -->
     </ion-segment-button>
 
   </ion-segment>
 
+  <div class="aviso-aba" *ngIf="segment === 'list'">
+    <ion-title class="info-title">Bem Vindo!</ion-title>
+
+    <div class="info-abas">
+      <ion-icon name="briefcase"></ion-icon>
+      <ion-note> - Fretes disponiveis</ion-note>
+    </div>
+    <div class="info-abas">
+
+      <ion-icon name="swap-horizontal"></ion-icon>
+      <ion-note> - Fretes ativos</ion-note>
+    </div>
+    <div class="info-abas">
+
+      <ion-icon name="time"></ion-icon>
+      <ion-note> - Fretes Historico</ion-note>
+    </div>
+  </div>
+
   <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'disponivel'">
-    <ion-card *ngFor="let user of users, let i = index">
+    <ion-card *ngFor="let shipping of data_Disponivel, let i = index">
       <ion-card-content>
 
-        <div> {{ i + 1 }} - {{user.email}} </div>
+        <div> {{ i + 1 }} - {{shipping.shipping_name}} </div>
         <ion-icon name="location"></ion-icon>
-        <p>{{user.first_name}} -to- {{user.last_name}}</p>
+        <p>{{shipping.shipping_address_start}} -> para -> {{shipping.shipping_address_finish}}</p>
 
       </ion-card-content>
     </ion-card>
   </div>
 
   <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'ativo'">
-    <ion-card *ngFor="let user of users, let i = index">
+    <ion-card *ngFor="let shipping of data_Andamento, let i = index">
       <ion-card-content>
 
-        <div>{{ i + 1 }} - {{user.email}} </div>
+        <div>{{ i + 1 }} - {{shipping.shipping_name}} </div>
         <ion-icon name="location"></ion-icon>
-        <p>{{user.first_name}} -to- {{user.last_name}}</p>
+        <p>{{shipping.shipping_address_start}} -> para -> {{shipping.shipping_address_finish}}</p>
 
       </ion-card-content>
     </ion-card>
   </div>
 
   <div class="animate__animated animate__slideInUp animate__fast" *ngIf="segment === 'historico'">
-    <ion-card *ngFor="let user of users, let i = index">
+    <ion-card *ngFor="let shipping of data_Finalizada, let i = index">
       <ion-card-content>
 
-        <div>{{ i + 1 }} - {{user.email}} </div>
+        <div>{{ i + 1 }} - {{shipping.shipping_name}} </div>
         <ion-icon name="location"></ion-icon>
-        <p>{{user.first_name}} -to- {{user.last_name}}</p>
+        <p>{{shipping.shipping_address_start}} -> para -> {{shipping.shipping_address_finish}}</p>
 
       </ion-card-content>
     </ion-card>
   </div>
 
 </ion-content>
+<ion-footer>
+  <app-tab-footer>
+  </app-tab-footer>
+</ion-footer>
