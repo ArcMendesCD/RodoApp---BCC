@@ -1,0 +1,24 @@
+
+<ion-content class="content" [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <img class="logo"  alt="logo" id="header_logo" margin="20px" src="../../assets/logo.png">
+  <div class="titulo"><span>LOGIN</span></div>
+  <ion-list style="text-align: center;">
+    <ion-item>
+      <ion-input labelPlacement="stacked" label="Usúario: " placeholder="Digite seu Usúario...">
+        <ion-icon slot="start" name="person" aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input labelPlacement="stacked" label="Senha: " type="password" value="password">
+        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+    <ion-button class="btnLogin">LOGIN</ion-button>
+  </ion-list>
+  <div class="esqueciContainer">
+    <a class="esqueci" href="reset">Esqueci minha senha</a>
+  </div>
+</ion-content>

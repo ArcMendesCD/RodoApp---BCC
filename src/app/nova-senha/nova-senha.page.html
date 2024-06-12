@@ -1,0 +1,23 @@
+<ion-content class="content" [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <img class="logo" alt="logo" id="header_logo" margin="20px" src="../../assets/logo.png">
+  <div class="titulo"><span>NOVA SENHA</span></div>
+  <ion-list style="text-align: center;">
+    <ion-item>
+      <ion-input labelPlacement="stacked" label="Nova Senha: " type="password" placeholder="Digite sua nova senha..." [(ngModel)]="novaSenha">
+        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input labelPlacement="stacked" label="Confirme a Nova Senha: " type="password" placeholder="Confirme sua nova senha..." [(ngModel)]="confirmaSenha">
+        <ion-icon slot="start" name="lock-closed" aria-hidden="true"></ion-icon>
+      </ion-input>
+    </ion-item>
+    <ion-button class="btnNovaSenha" (click)="mudarSenha()">ALTERAR SENHA</ion-button>
+  </ion-list>
+  <div class="voltarContainer">
+    <a class="voltar" href="login">Voltar ao Login</a>
+  </div>
+</ion-content>
