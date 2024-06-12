@@ -3,30 +3,26 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+    path: 'reset',
+    loadChildren: () => import('./reset/reset.module').then( m => m.ResetPageModule)
   },
   {
-    path: 'perfil',
-    loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
-    path: 'frete',
-    loadChildren: () => import('./frete/frete.module').then( m => m.FretePageModule)
+    path: 'nova-senha',
+    loadChildren: () => import('./nova-senha/nova-senha.module').then( m => m.NovaSenhaPageModule)
   },
-  {
-    path: 'mapa',
-    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
-  },
-  {
-    path: 'rodo-app',
-    loadChildren: () => import('./rodo-app/rodo-app.module').then( m => m.RodoAppPageModule)
-  }
 ];
 
 @NgModule({
