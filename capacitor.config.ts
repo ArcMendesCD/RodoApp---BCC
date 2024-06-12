@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.antares.rodoapp',
-  appName: 'RodoApp',
+  appId: 'io.ionic.starter',
+  appName: 'teste',
   webDir: 'www'
 };
 
