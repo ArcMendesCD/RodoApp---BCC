@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
-import { ItemService } from '../services/item.service';
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -9,16 +7,19 @@ import { ItemService } from '../services/item.service';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private route: ActivatedRoute, private itemService: ItemService, private http: HttpClient) { }
+  constructor(private navCtrl: NavController) {}
 
-  ngOnInit() {
-    this.itemService.loadData();
+  login() {
+    const username = (document.getElementById('username') as HTMLInputElement).value;
+    const password = (document.getElementById('password') as HTMLInputElement).value;
+
+    if (username === 'laurinha30' && password === 'laura123') {
+      this.navCtrl.navigateForward('/home');
+    } else {
+      alert('Usuário ou senha incorretos');
+    }
   }
 
-
-
-  // if (this.uname.length === 0 || this.password.length === 0) {
-  //   this.alertMessage = "Campos obrigatórios não podem estar em branco!";
-  //   return;
-  // }
+  ngOnInit() {
+  }
 }
