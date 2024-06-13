@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ItemService {
-  private apiUrl = 'http://168.121.216.20';
+  private apiUrl = 'DB URL HERE';
 
   data: any = [];
 
